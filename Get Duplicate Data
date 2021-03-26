@@ -1,0 +1,1 @@
+SELECT id, companyName FROM companies WHERE companyName IN ( SELECT companyName FROM companies GROUP BY companyName HAVING COUNT(id) > 1 )
